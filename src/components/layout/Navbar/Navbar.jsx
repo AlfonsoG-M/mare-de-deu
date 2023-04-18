@@ -12,7 +12,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-/* import { theme } from "../../../ThemeConfig"; */
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
