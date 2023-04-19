@@ -14,6 +14,12 @@ import Toolbar from "@mui/material/Toolbar";
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import { theme } from "../../../themeConfig";
+
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const drawerWidth = 200;
 
 const Navbar = (props) => {
@@ -62,18 +68,35 @@ const Navbar = (props) => {
             <ListItemText primary={"Espiritualidad"} />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton onClick={() => navigate("/sacramentos")}>
-            <ListItemText primary={"Sacramentos"} />
-          </ListItemButton>
-        </ListItem>
+
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/comunidad")}>
             <ListItemText primary={"Comunidad"} />
           </ListItemButton>
         </ListItem>
       </List>
-      
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Sacramentos</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ padding: 0 }}>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate("/espiritualidad")}>
+              <ListItemText primary={"Espiritualidad"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate("/espiritualidad")}>
+              <ListItemText primary={"Espiritualidad"} />
+            </ListItemButton>
+          </ListItem>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 
