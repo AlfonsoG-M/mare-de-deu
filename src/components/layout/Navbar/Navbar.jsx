@@ -14,7 +14,6 @@ import Toolbar from "@mui/material/Toolbar";
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import { theme } from "../../../themeConfig";
-
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -43,56 +42,64 @@ const Navbar = (props) => {
       >
         <Avatar
           alt="Remy Sharp"
-          src={""}
-          // onClick={() => console.log("hola")}
+          src={
+            "https://res.cloudinary.com/dkwjizhdg/image/upload/v1681989653/Mare%20de%20deu/Mare_de_deu_Logo_dnz02g.jpg"
+          }
+          onClick={() => navigate("/mare-de-deu")}
+          style={{
+            cursor: "pointer",
+            height: "80px",
+            width: "80px",
+          }}
         />
       </Box>
       <List>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/")}>
-            <ListItemText primary={"Home"} />
+            <ListItemText primary={"Home"} sx={{ color: theme.palette.secondary.main }}/>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/mare-de-deu")}>
-            <ListItemText primary={"Mare de deu"} />
+            <ListItemText primary={"Mare de deu"} sx={{ color: theme.palette.secondary.main}}/>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/horarios")}>
-            <ListItemText primary={"Horarios"} />
+            <ListItemText primary={"Horarios"} sx={{ color: theme.palette.secondary.main}}/>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/espiritualidad")}>
-            <ListItemText primary={"Espiritualidad"} />
+            <ListItemText primary={"Espiritualidad"} sx={{ color: theme.palette.secondary.main}}/>
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/comunidad")}>
-            <ListItemText primary={"Comunidad"} />
+            <ListItemText primary={"Comunidad"} sx={{ color: theme.palette.secondary.main}}/>
           </ListItemButton>
         </ListItem>
       </List>
-
-      <Accordion>
+      <Accordion
+      sx={{ backgroundColor: theme.palette.primary.main, border: "none" }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Sacramentos</Typography>
+          <Typography sx={{ color: theme.palette.secondary.main}}>Sacramentos</Typography>
         </AccordionSummary>
-        <AccordionDetails style={{ padding: 0 }}>
+        <AccordionDetails sx={{ backgroundColor: theme.palette.secondary.main, border: "none" ,padding: 0, color: "white" }}>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => navigate("/espiritualidad")}>
-              <ListItemText primary={"Espiritualidad"} />
+            <ListItemButton onClick={() => navigate("/bautismo")}>
+              <ListItemText primary={"Bautismo"} />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => navigate("/espiritualidad")}>
-              <ListItemText primary={"Espiritualidad"} />
+            <ListItemButton onClick={() => navigate("/matrimonio")}>
+              <ListItemText primary={"Matrimonio"} />
             </ListItemButton>
           </ListItem>
         </AccordionDetails>
@@ -115,13 +122,9 @@ const Navbar = (props) => {
         <Toolbar
           sx={{ gap: "20px", display: "flex", justifyContent: "space-between" }}
         >
-          <Box>
-            <img
-              src="https://res.cloudinary.com/dnqfh2chg/image/upload/v1680267428/03_nemivw.png"
-              alt=""
-              style={{ width: "70px" }}
-            />
-          </Box>
+          <Box sx={{ color: theme.palette.secondary.main }}>
+            <h2>Mare de deu</h2>
+          </Box >
           <IconButton
             color="secondary.primary"
             aria-label="open drawer"

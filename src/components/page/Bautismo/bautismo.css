@@ -1,0 +1,32 @@
+.divHeaderBautismo{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+}
+
+.formularioH6{
+    padding-left: 2rem;
+}
+
+form{
+    border: solid 3px #BD8F35;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+}
+
+.dataDiv{
+    padding: 10px;
+}
+
+.submitButton{
+    color:#1B4060 !important;
+    font-weight: 700 !important;
+}
+
+
+

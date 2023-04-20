@@ -1,0 +1,24 @@
+.mareContainerDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.mareImg{
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    width: 10%;
+}
+
+.mareH2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.mareParagraph{
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}
