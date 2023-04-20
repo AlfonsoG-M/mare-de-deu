@@ -72,6 +72,7 @@ const Bautismo = () => {
         <Typography variant="h1" className="h1Bautismo" color="secondary.main">
           Bautismo
         </Typography>
+        <p className="citaBautismo">El Bautismo es el Sacramento de la salvación: un encuentro con Dios que nos limpia del pecado y nos hace verdaderos hijos de Dios, compartiendo su propia vida divina. Este gran regalo se ofrece a todos los que creen y a los hijos de familias de fe.</p>
       </div>
       <Typography variant="h6" className="formularioH6" color="secondary.main">
         Formulario a completar para coordinar un baustimo

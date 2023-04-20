@@ -60,12 +60,14 @@ const Matrimonio = () => {
     <div>
       <div className="divHeaderMatrimonio">
         <img
-          src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1682017354/Mare%20de%20deu/matrimonio_pmagpa.jpg"
+          src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1682024121/Mare%20de%20deu/matrimonio1_cfjv3q.jpg"
           alt=""
+          className="imgMatrimonio"
         />
         <Typography variant="h1" className="h1Matromonio" color="secondary.main">
           Matromonio
         </Typography>
+        <p className="citaMatrimonio">"La alianza matrimonial, por la que el varón y la mujer constituyen entre sí un consorcio de toda la vida, ordenado por su misma índole natural al bien de los cónyuges y a la generación y educación de la prole, fue elevada por Cristo Nuestro Señor a la dignidad de sacramento entre bautizados" (CIC, can. 1055,1)</p>
       </div>
       <Typography variant="h6" className="formularioH6" color="secondary.main">
         Formulario a completar para coordinar un baustimo

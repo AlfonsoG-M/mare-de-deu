@@ -8,6 +8,17 @@
     margin-right: 1rem;
 }
 
+.h1Bautismo{
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.citaBautismo{
+    color:#1B4060;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-style:oblique;
+}
+
 .formularioH6{
     padding-left: 2rem;
 }
