@@ -111,7 +111,7 @@ const Navbar = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex"}}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -180,7 +180,7 @@ const Navbar = (props) => {
         component="main"
         sx={{
           flexGrow: 1,
-          py: 4,
+          padding: "20px",
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           backgroundColor: theme.palette.secondary.primary,
           minHeight: "100vh",

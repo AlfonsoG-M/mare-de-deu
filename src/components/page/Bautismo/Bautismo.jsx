@@ -17,11 +17,11 @@ const Bautismo = () => {
         telefono: "",
         email: "",
         fecha: "",
-        nombreBB:"",
-        documentoBB:"",
-        nombreMadre:"",
+        nombreBB: "",
+        documentoBB: "",
+        nombreMadre: "",
         documentoMadre: "",
-        nombrePadre:"",
+        nombrePadre: "",
         documentoPadre: "",
       },
       onSubmit: (data) => {
@@ -63,16 +63,22 @@ const Bautismo = () => {
     });
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <div className="divHeaderBautismo">
         <img
           src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1681991932/Mare%20de%20deu/bautismo_fpq0yo.jpg"
           alt=""
+          style={{width: "100%"}}
         />
         <Typography variant="h1" className="h1Bautismo" color="secondary.main">
           Bautismo
         </Typography>
-        <p className="citaBautismo">El Bautismo es el Sacramento de la salvación: un encuentro con Dios que nos limpia del pecado y nos hace verdaderos hijos de Dios, compartiendo su propia vida divina. Este gran regalo se ofrece a todos los que creen y a los hijos de familias de fe.</p>
+        <p className="citaBautismo">
+          El Bautismo es el Sacramento de la salvación: un encuentro con Dios
+          que nos limpia del pecado y nos hace verdaderos hijos de Dios,
+          compartiendo su propia vida divina. Este gran regalo se ofrece a todos
+          los que creen y a los hijos de familias de fe.
+        </p>
       </div>
       <Typography variant="h6" className="formularioH6" color="secondary.main">
         Formulario a completar para coordinar un baustimo
@@ -153,7 +159,7 @@ const Bautismo = () => {
           </div>
         </div>
         <div>
-        <Typography variant="h7" color="secondary.main">
+          <Typography variant="h7" color="secondary.main">
             Datos del niño/a a bautizar
           </Typography>
           <div className="dataDiv">
@@ -180,7 +186,7 @@ const Bautismo = () => {
           </div>
         </div>
         <div>
-        <Typography variant="h7" color="secondary.main">
+          <Typography variant="h7" color="secondary.main">
             Datos de la madre
           </Typography>
           <div className="dataDiv">
@@ -207,7 +213,7 @@ const Bautismo = () => {
           </div>
         </div>
         <div>
-        <Typography variant="h7" color="secondary.main">
+          <Typography variant="h7" color="secondary.main">
             Datos del padre
           </Typography>
           <div className="dataDiv">

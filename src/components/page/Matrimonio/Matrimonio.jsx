@@ -1,11 +1,11 @@
-import { Typography, TextField, Button } from "@mui/material";
+import { Typography, TextField, Button, Grid, Box } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import './matrimonio.css'
+import "./matrimonio.css";
 
 const Matrimonio = () => {
   const { handleChange, handleSubmit, values, errors, setFieldValue } =
@@ -17,9 +17,9 @@ const Matrimonio = () => {
         telefono: "",
         email: "",
         fecha: "",
-        nombreNovio:"",
-        documentoNovio:"",
-        nombreNovia:"",
+        nombreNovio: "",
+        documentoNovio: "",
+        nombreNovia: "",
         documentoNovia: "",
       },
       onSubmit: (data) => {
@@ -58,17 +58,45 @@ const Matrimonio = () => {
 
   return (
     <div>
-      <div className="divHeaderMatrimonio">
-        <img
-          src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1682024121/Mare%20de%20deu/matrimonio1_cfjv3q.jpg"
-          alt=""
-          className="imgMatrimonio"
-        />
-        <Typography variant="h1" className="h1Matromonio" color="secondary.main">
-          Matrimonio
-        </Typography>
-        <p className="citaMatrimonio">"La alianza matrimonial, por la que el varón y la mujer constituyen entre sí un consorcio de toda la vida, ordenado por su misma índole natural al bien de los cónyuges y a la generación y educación de la prole, fue elevada por Cristo Nuestro Señor a la dignidad de sacramento entre bautizados" (CIC, can. 1055,1)</p>
-      </div>
+      <Grid container>
+        <Grid item xs={12} md={4}>
+          <img
+            src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1682024121/Mare%20de%20deu/matrimonio1_cfjv3q.jpg"
+            alt=""
+            className="imgMatrimonio"
+            style={{ width: "100%" }}
+          />
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Typography
+            variant="h1"
+            className="h1Matromonio"
+            color="secondary.main"
+            align="center"
+          >
+            Matrimonio
+          </Typography>
+
+          <Box
+            sx={{
+              width: {xs: "90%", md: "70%"},
+              margin: "0 auto",
+            }}
+          >
+            <Typography
+              variant="subtitle"
+              className="citaMatrimonio"
+              align="center"
+            >
+              "La alianza matrimonial, por la que el varón y la mujer
+              constituyen entre sí un consorcio de toda la vida, ordenado por su
+              misma índole natural al bien de los cónyuges y a la generación y
+              educación de la prole, fue elevada por Cristo Nuestro Señor a la
+              dignidad de sacramento entre bautizados" (CIC, can. 1055,1)
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
       <Typography variant="h6" className="formularioH6" color="secondary.main">
         Formulario a completar para coordinar un casamiento
       </Typography>
@@ -148,7 +176,7 @@ const Matrimonio = () => {
           </div>
         </div>
         <div>
-        <Typography variant="h7" color="secondary.main">
+          <Typography variant="h7" color="secondary.main">
             Datos del novio
           </Typography>
           <div className="dataDiv">
@@ -175,7 +203,7 @@ const Matrimonio = () => {
           </div>
         </div>
         <div>
-        <Typography variant="h7" color="secondary.main">
+          <Typography variant="h7" color="secondary.main">
             Datos de la novia
           </Typography>
           <div className="dataDiv">
@@ -207,6 +235,6 @@ const Matrimonio = () => {
       </form>
     </div>
   );
-}
+};
 
-export default Matrimonio
+export default Matrimonio;
