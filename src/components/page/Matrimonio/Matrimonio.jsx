@@ -65,12 +65,12 @@ const Matrimonio = () => {
           className="imgMatrimonio"
         />
         <Typography variant="h1" className="h1Matromonio" color="secondary.main">
-          Matromonio
+          Matrimonio
         </Typography>
         <p className="citaMatrimonio">"La alianza matrimonial, por la que el varón y la mujer constituyen entre sí un consorcio de toda la vida, ordenado por su misma índole natural al bien de los cónyuges y a la generación y educación de la prole, fue elevada por Cristo Nuestro Señor a la dignidad de sacramento entre bautizados" (CIC, can. 1055,1)</p>
       </div>
       <Typography variant="h6" className="formularioH6" color="secondary.main">
-        Formulario a completar para coordinar un baustimo
+        Formulario a completar para coordinar un casamiento
       </Typography>
       <form onSubmit={handleSubmit}>
         <div>
