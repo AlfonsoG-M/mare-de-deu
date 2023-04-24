@@ -113,7 +113,7 @@ const Matrimonio = () => {
           </Box>
         </Grid>
       </Grid>
-      <Typography variant="h6" className="formularioH6" color="secondary.main">
+      <Typography variant="h6" className="formularioH6" color="secondary.main" sx={{fontWeight:"700"}}>
         Formulario a completar para coordinar un casamiento
       </Typography>
       <form onSubmit={handleSubmit}>
@@ -187,7 +187,7 @@ const Matrimonio = () => {
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
-            <LocalizationProvider dateAdapter={AdapterDayjs} >
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
                 label="Fecha casamiento"
                 name="fecha"
@@ -196,68 +196,78 @@ const Matrimonio = () => {
                 }}
                 error={errors.fecha ? true : false}
                 helperText={errors.fecha}
-                sx={{width:"100%"}}
+                sx={{ width: "100%" }}
               />
             </LocalizationProvider>
           </Grid>
         </Grid>
-        <div>
-          <Typography variant="h7" color="secondary.main">
-            Datos del novio
-          </Typography>
-          <div className="dataDiv">
+        <Typography variant="h7" color="secondary.main">
+          Datos del novio
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              error={errors.nombreNovio ? true : false}
+              fullWidth
+              helperText={errors.nombreNovio}
               label="Nombre y Apellido del novio"
               name="nombreNovio"
+              onChange={handleChange}
               variant="outlined"
               value={values.nombreNovio}
-              onChange={handleChange}
-              error={errors.nombreNovio ? true : false}
-              helperText={errors.nombreNovio}
             />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              error={errors.documentoNovio ? true : false}
+              fullWidth
+              helperText={errors.documentoNovio}
               label="Documento del novio"
               name="documentoNovio"
+              onChange={handleChange}
               variant="outlined"
               value={values.dodocumentoNovio}
-              onChange={handleChange}
-              error={errors.documentoNovio ? true : false}
-              helperText={errors.documentoNovio}
             />
-          </div>
-        </div>
-        <div>
-          <Typography variant="h7" color="secondary.main">
-            Datos de la novia
-          </Typography>
-          <div className="dataDiv">
+          </Grid>
+        </Grid>
+        <Typography variant="h7" color="secondary.main">
+          Datos de la novia
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              error={errors.nombreNovia ? true : false}
+              fullWidth
+              helperText={errors.nombreNovia}
               label="Nombre de la novia"
               name="nombreNovia"
+              onChange={handleChange}
               variant="outlined"
               value={values.nombreNovia}
-              onChange={handleChange}
-              error={errors.nombreNovia ? true : false}
-              helperText={errors.nombreNovia}
             />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              error={errors.documentoNovia ? true : false}
+              fullWidth
+              helperText={errors.documentoNovia}
               label="Documento de la novia"
               name="documentoNovia"
+              onChange={handleChange}
               variant="outlined"
               value={values.documentoNovia}
-              onChange={handleChange}
-              error={errors.documentoNovia ? true : false}
-              helperText={errors.documentoNovia}
             />
-          </div>
-        </div>
-        <Button variant="contained" type="submit" className="submitButton">
+          </Grid>
+        </Grid>
+        <Button variant="contained" type="submit" className="submitButton" sx={{ width: "40%", display:"block", margin: "auto", marginTop: "1rem", fontWeight: "700", color:"secondary.main" }}
+        >
           Enviar
         </Button>
+
       </form>
     </div>
   );
