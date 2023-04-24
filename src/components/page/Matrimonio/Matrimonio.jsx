@@ -121,7 +121,7 @@ const Matrimonio = () => {
           Datos de contacto
         </Typography>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
               error={errors.nombre ? true : false}
@@ -134,7 +134,7 @@ const Matrimonio = () => {
               value={values.nombre}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
               label="Documento"
@@ -147,7 +147,7 @@ const Matrimonio = () => {
               fullWidth
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
               label="Domicilio"
@@ -160,7 +160,7 @@ const Matrimonio = () => {
               fullWidth
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
               fullWidth
@@ -173,7 +173,7 @@ const Matrimonio = () => {
               helperText={errors.telefono}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
               fullWidth
@@ -186,7 +186,7 @@ const Matrimonio = () => {
               helperText={errors.email}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4}>
             <LocalizationProvider dateAdapter={AdapterDayjs} >
               <DatePicker
                 label="Fecha casamiento"
