@@ -6,6 +6,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./matrimonio.css";
+import emailjs from "@emailjs/browser";
 
 const Matrimonio = () => {
   const { handleChange, handleSubmit, values, errors, setFieldValue } =
@@ -36,6 +37,15 @@ const Matrimonio = () => {
           documentoNovia: data.documentoNovia,
         };
         console.log(userData);
+        emailjs
+          .send(
+            "service_kafjauh",
+            "template_71353tg",
+            userData,
+            "zWb5Idg0kFuETlSBj"
+          )
+          .then((res) => console.log("res ", res))
+          .catch((error) => console.log("error ", error));
       },
       validationSchema: Yup.object().shape({
         nombre: Yup.string().required("Este campo es obligatorio"),
@@ -73,20 +83,26 @@ const Matrimonio = () => {
             className="h1Matromonio"
             color="secondary.main"
             align="center"
+            fontFamily="Times New Roman"
+            fontStyle="oblique"
           >
             Matrimonio
           </Typography>
 
           <Box
             sx={{
-              width: {xs: "90%", md: "70%"},
+              width: { xs: "90%", md: "70%" },
               margin: "0 auto",
             }}
           >
             <Typography
               variant="subtitle"
-              className="citaMatrimonio"
               align="center"
+              className="citaMatrimonio"
+              color="secondary.main"
+              fontFamily="Times New Roman"
+              fontSize="18px"
+              fontStyle="oblique"
             >
               "La alianza matrimonial, por la que el varón y la mujer
               constituyen entre sí un consorcio de toda la vida, ordenado por su
@@ -101,21 +117,24 @@ const Matrimonio = () => {
         Formulario a completar para coordinar un casamiento
       </Typography>
       <form onSubmit={handleSubmit}>
-        <div>
-          <Typography variant="h7" color="secondary.main">
-            Datos de contacto
-          </Typography>
-          <div className="dataDiv">
+        <Typography variant="h7" color="secondary.main">
+          Datos de contacto
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              error={errors.nombre ? true : false}
+              fullWidth
+              helperText={errors.nombre}
               label="Nombre y Apellido"
               name="nombre"
+              onChange={handleChange}
               variant="outlined"
               value={values.nombre}
-              onChange={handleChange}
-              error={errors.nombre ? true : false}
-              helperText={errors.nombre}
             />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
               label="Documento"
@@ -125,9 +144,10 @@ const Matrimonio = () => {
               onChange={handleChange}
               error={errors.documento ? true : false}
               helperText={errors.documento}
+              fullWidth
             />
-          </div>
-          <div className="dataDiv">
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
               label="Domicilio"
@@ -137,11 +157,13 @@ const Matrimonio = () => {
               onChange={handleChange}
               error={errors.domicilio ? true : false}
               helperText={errors.domicilio}
+              fullWidth
             />
-          </div>
-          <div className="dataDiv">
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              fullWidth
               label="Teléfono"
               name="telefono"
               variant="outlined"
@@ -150,8 +172,11 @@ const Matrimonio = () => {
               error={errors.telefono ? true : false}
               helperText={errors.telefono}
             />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
+              fullWidth
               label="e-mail"
               name="email"
               variant="outlined"
@@ -160,9 +185,9 @@ const Matrimonio = () => {
               error={errors.email ? true : false}
               helperText={errors.email}
             />
-          </div>
-          <div className="dataDiv">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <LocalizationProvider dateAdapter={AdapterDayjs} >
               <DatePicker
                 label="Fecha casamiento"
                 name="fecha"
@@ -171,10 +196,11 @@ const Matrimonio = () => {
                 }}
                 error={errors.fecha ? true : false}
                 helperText={errors.fecha}
+                sx={{width:"100%"}}
               />
             </LocalizationProvider>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
         <div>
           <Typography variant="h7" color="secondary.main">
             Datos del novio
