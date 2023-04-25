@@ -68,7 +68,7 @@ const Matrimonio = () => {
 
   return (
     <div>
-      <Grid container >
+      <Grid container>
         <Grid item xs={12} md={4}>
           <img
             src="https://res.cloudinary.com/dkwjizhdg/image/upload/v1682024121/Mare%20de%20deu/matrimonio1_cfjv3q.jpg"
@@ -113,15 +113,28 @@ const Matrimonio = () => {
           </Box>
         </Grid>
       </Grid>
-      <Typography variant="h6" className="formularioH6" color="secondary.main" mb={1} mt={2} fontWeight={700} >
+      <Typography
+        variant="h6"
+        className="formularioH6"
+        color="secondary.main"
+        mb={1}
+        mt={2}
+        fontWeight={700}
+      >
         Formulario a completar para coordinar un casamiento
       </Typography>
-      <form onSubmit={handleSubmit} style={{border:"1px solid #BD8F35", padding:"10px"}}>
-        <Typography variant="h7" color="secondary.main" bgcolor={"red"} sx={{marginBottom:"50px !important"}}>
+      <form
+        onSubmit={handleSubmit}
+        style={{ border: "1px solid #BD8F35", padding: "10px" }}
+      >
+        <Typography
+          variant="h7"
+          color="secondary.main"
           
+        >
           Datos de contacto
         </Typography>
-        <Grid container spacing={2} >
+        <Grid container spacing={2} mt={0} mb={2}>
           <Grid item xs={12} md={6} lg={4}>
             <TextField
               id="outlined-basic"
@@ -205,7 +218,7 @@ const Matrimonio = () => {
         <Typography variant="h7" color="secondary.main" mt={4}>
           Datos del novio
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} mt={0} mb={2}>
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
@@ -236,7 +249,7 @@ const Matrimonio = () => {
         <Typography variant="h7" color="secondary.main">
           Datos de la novia
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} mt={0} >
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
@@ -264,11 +277,21 @@ const Matrimonio = () => {
             />
           </Grid>
         </Grid>
-        <Button variant="contained" type="submit" className="submitButton" sx={{ width: "40%", display:"block", margin: "auto", marginTop: "1rem", fontWeight: "700", color:"secondary.main" }}
+        <Button
+          variant="contained"
+          type="submit"
+          className="submitButton"
+          sx={{
+            width: "40%",
+            display: "block",
+            margin: "auto",
+            marginTop: "1rem",
+            fontWeight: "700",
+            color: "secondary.main",
+          }}
         >
           Enviar
         </Button>
-
       </form>
     </div>
   );
