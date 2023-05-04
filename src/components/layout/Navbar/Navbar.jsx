@@ -56,42 +56,66 @@ const Navbar = (props) => {
       <List>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/")}>
-            <ListItemText primary={"Home"} sx={{ color: theme.palette.secondary.main }}/>
+            <ListItemText
+              primary={"Home"}
+              sx={{ color: theme.palette.secondary.main }}
+            />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/mare-de-deu")}>
-            <ListItemText primary={"Mare de deu"} sx={{ color: theme.palette.secondary.main}}/>
+            <ListItemText
+              primary={"Mare de deu"}
+              sx={{ color: theme.palette.secondary.main }}
+            />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/horarios")}>
-            <ListItemText primary={"Horarios"} sx={{ color: theme.palette.secondary.main}}/>
+            <ListItemText
+              primary={"Horarios"}
+              sx={{ color: theme.palette.secondary.main }}
+            />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/espiritualidad")}>
-            <ListItemText primary={"Espiritualidad"} sx={{ color: theme.palette.secondary.main}}/>
+            <ListItemText
+              primary={"Espiritualidad"}
+              sx={{ color: theme.palette.secondary.main }}
+            />
           </ListItemButton>
         </ListItem>
 
         <ListItem disablePadding>
           <ListItemButton onClick={() => navigate("/comunidad")}>
-            <ListItemText primary={"Comunidad"} sx={{ color: theme.palette.secondary.main}}/>
+            <ListItemText
+              primary={"Comunidad"}
+              sx={{ color: theme.palette.secondary.main }}
+            />
           </ListItemButton>
         </ListItem>
       </List>
       <Accordion
-      sx={{ backgroundColor: theme.palette.primary.main, border: "none" }}
+        sx={{ backgroundColor: theme.palette.primary.main, border: "none" }}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography sx={{ color: theme.palette.secondary.main}}>Sacramentos</Typography>
+          <Typography sx={{ color: theme.palette.secondary.main }}>
+            Sacramentos
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{ backgroundColor: theme.palette.secondary.main, border: "none" ,padding: 0, color: "white" }}>
+        <AccordionDetails
+          sx={{
+            backgroundColor: theme.palette.secondary.main,
+            border: "none",
+            padding: 0,
+            color: "white",
+          }}
+        >
           <ListItem disablePadding>
             <ListItemButton onClick={() => navigate("/bautismo")}>
               <ListItemText primary={"Bautismo"} />
@@ -111,7 +135,7 @@ const Navbar = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -124,7 +148,7 @@ const Navbar = (props) => {
         >
           <Box sx={{ color: theme.palette.secondary.main }}>
             <h2>Mare de deu</h2>
-          </Box >
+          </Box>
           <IconButton
             color="secondary.primary"
             aria-label="open drawer"
@@ -168,7 +192,12 @@ const Navbar = (props) => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: theme.palette.primary.main,
+              // backgroundColor: "red",
+              backgroundImage:
+                "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uGwKgedMAoXf7zZMCI4WffX9MaZZChcoy3NVL8Sz_Y68v7wgUtUKpWbjSC4tG3oDn2I&usqp=CAU)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
             },
           }}
           open
